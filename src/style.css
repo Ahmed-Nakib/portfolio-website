@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+ @layer utilities {
+    .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .animate-spin-slow {
+    animation: spin 6s linear infinite;
+  }
+  .font-outfit {
+    font-family: "Outfit", sans-serif;
+  }
+  .font-ovo {
+    font-family: "Ovo", serif;
+  }
+  .lightHover {
+    background-color: #fcf4ff;
+  }
+  .darkHover {
+    background-color: #2a002a;
+  }
+  .hover-black:hover {
+    box-shadow: 4px 4px 0 #000;
+  }
+  .hover-wite:hover {
+    box-shadow: 4px 4px 0 #fff;
+  }
+}
+
+
+@layer theme {
+  .dark {
+    --color-bgContrast: #66C8B6;
+  }
+}
